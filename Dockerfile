@@ -1,5 +1,5 @@
 # Build stage
-FROM node:18-alpine AS build
+FROM node:25.2 AS build
 
 WORKDIR /app
 
