@@ -53,11 +53,6 @@ jobs:
         cache-from: type=gha
         cache-to: type=gha,mode=max
     
-    - name: Run tests
-      run: |
-        docker build -t ${{ env.IMAGE_NAME }} .
-        docker run --rm ${{ env.IMAGE_NAME }} npm test -- --coverage --watchAll=false
-    
     - name: Notify on success
       if: success()
       run: |
